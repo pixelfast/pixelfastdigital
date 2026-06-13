@@ -1,2398 +1,2440 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pixelfast Digital | Web Design, SEO & Digital Services</title>
-  <meta name="description" content="Pixelfast Digital builds professional websites, delivers results-driven SEO, and helps small businesses grow online. Get a free quote today.">
-  <meta name="keywords" content="web design, SEO, Google Business Profile, website maintenance, web hosting, small business websites">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixelfast Digital | Web Design, SEO & Digital Services</title>
+    <meta name="description" content="Pixelfast Digital builds professional websites, delivers results-driven SEO, and helps small businesses grow online. Get a free quote today." />
+    <meta name="keywords" content="web design, SEO, Google Business Profile, website maintenance, web hosting, small business websites" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Pixelfast Digital | Web Design, SEO & Digital Services">
-  <meta property="og:description" content="Professional websites, SEO, and digital services for small businesses. Fast, affordable, results-driven.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pixelfast.com">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pixelfast Digital | Web Design, SEO & Digital Services" />
+    <meta property="og:description" content="Professional websites, SEO, and digital services for small businesses. Fast, affordable, results-driven." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pixelfast.com" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <style>
-    /* =========================================
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      /* =========================================
        CSS RESET & BASE
     ========================================= */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    :root {
-      --navy-deep:    #000c19;
-      --navy-mid:     #001733;
-      --navy-light:   #002f64;
-      --navy-card:    #071a35;
-      --navy-border:  rgba(255,255,255,0.08);
+      :root {
+        --navy-deep: #000c19;
+        --navy-mid: #001733;
+        --navy-light: #002f64;
+        --navy-card: #071a35;
+        --navy-border: rgba(255, 255, 255, 0.08);
 
-      --gold:         #FFB800;
-      --orange:       #FF6B00;
-      --gradient:     linear-gradient(135deg, #FFB800, #FF6B00);
-      --gradient-rev: linear-gradient(135deg, #FF6B00, #FFB800);
+        --gold: #ffb800;
+        --orange: #ff6b00;
+        --gradient: linear-gradient(135deg, #ffb800, #ff6b00);
+        --gradient-rev: linear-gradient(135deg, #ff6b00, #ffb800);
 
-      --text-primary:   #ffffff;
-      --text-secondary: #94a3b8;
-      --text-muted:     #64748b;
+        --text-primary: #ffffff;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
 
-      --font: 'Inter', sans-serif;
-      --radius: 12px;
-      --radius-lg: 20px;
-      --shadow: 0 4px 24px rgba(0,0,0,0.4);
-      --shadow-lg: 0 12px 48px rgba(0,0,0,0.5);
-    }
+        --font: 'Inter', sans-serif;
+        --radius: 12px;
+        --radius-lg: 20px;
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.5);
+      }
 
-    html {
-      scroll-behavior: smooth;
-    }
+      html {
+        scroll-behavior: smooth;
+      }
 
-    body {
-      font-family: var(--font);
-      background-color: var(--navy-deep);
-      color: var(--text-primary);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+      body {
+        font-family: var(--font);
+        background-color: var(--navy-deep);
+        color: var(--text-primary);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
 
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
 
-    /* =========================================
+      /* =========================================
        UTILITY
     ========================================= */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      background: linear-gradient(135deg, #FFB800, #FF6B00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 16px;
-    }
-
-    .section-title {
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-
-    .section-subtitle {
-      font-size: 18px;
-      color: var(--text-secondary);
-      max-width: 580px;
-      line-height: 1.7;
-    }
-
-    .section-header {
-      margin-bottom: 60px;
-    }
-
-    .section-header.centered {
-      text-align: center;
-    }
-
-    .section-header.centered .section-subtitle {
-      margin: 0 auto;
-    }
-
-    .gradient-text {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-family: var(--font);
-      font-size: 15px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      border: none;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: var(--gradient);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--gradient-rev);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(255, 107, 0, 0.35);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text-primary);
-      border: 1.5px solid rgba(255,255,255,0.25);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    .btn-lg {
-      padding: 17px 36px;
-      font-size: 16px;
-    }
-
-    /* =========================================
-       NAV
-    ========================================= */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
-
-    nav.scrolled {
-      background: rgba(0, 12, 25, 0.95);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--navy-border);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .nav-logo img {
-      height: 42px;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 36px;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-secondary);
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-primary);
-    }
-
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 4px;
-      background: none;
-      border: none;
-    }
-
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text-primary);
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      background: rgba(0,12,25,0.98);
-      backdrop-filter: blur(16px);
-      padding: 24px;
-      gap: 20px;
-      border-top: 1px solid var(--navy-border);
-    }
-
-    .mobile-menu a {
-      font-size: 16px;
-      font-weight: 500;
-      color: var(--text-secondary);
-      padding: 8px 0;
-      border-bottom: 1px solid var(--navy-border);
-    }
-
-    .mobile-menu a:last-child { border-bottom: none; }
-
-    .mobile-menu .btn { width: 100%; justify-content: center; margin-top: 8px; }
-
-    /* =========================================
-       HERO
-    ========================================= */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(138deg, #000c19 0%, #002f64 100%);
-      padding-top: 80px;
-    }
-
-    /* Animated grid lines */
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,184,0,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,184,0,0.04) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
-      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
-    }
-
-    /* Glowing orbs */
-    .hero-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.15;
-      animation: float 8s ease-in-out infinite;
-    }
-
-    .hero-orb-1 {
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, #FFB800, transparent);
-      top: -200px;
-      right: -100px;
-    }
-
-    .hero-orb-2 {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, #FF6B00, transparent);
-      bottom: -100px;
-      left: -100px;
-      animation-delay: -4s;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-30px) scale(1.05); }
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 760px;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 16px;
-      background: rgba(255,184,0,0.1);
-      border: 1px solid rgba(255,184,0,0.25);
-      border-radius: 100px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 28px;
-    }
-
-    .hero-badge .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--gold);
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
-    }
-
-    .hero h1 {
-      font-size: clamp(40px, 6vw, 72px);
-      font-weight: 900;
-      line-height: 1.08;
-      letter-spacing: -1px;
-      margin-bottom: 24px;
-    }
-
-    .hero-sub {
-      font-size: 20px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 40px;
-      max-width: 580px;
-    }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .hero-stats {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      margin-top: 64px;
-      padding-top: 40px;
-      border-top: 1px solid var(--navy-border);
-    }
-
-    .hero-stat-num {
-      font-size: 36px;
-      font-weight: 800;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-    }
-
-    .hero-stat-label {
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-top: 4px;
-    }
-
-    .hero-stat-divider {
-      width: 1px;
-      height: 40px;
-      background: var(--navy-border);
-    }
-
-    /* =========================================
-       TRUSTED BY / SCROLL STRIP
-    ========================================= */
-    .strip {
-      background: var(--navy-card);
-      border-top: 1px solid var(--navy-border);
-      border-bottom: 1px solid var(--navy-border);
-      padding: 20px 0;
-    }
-
-    .strip-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .strip-label {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-muted);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .strip-divider {
-      width: 1px;
-      height: 20px;
-      background: var(--navy-border);
-    }
-
-    .strip-tags {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .strip-tag {
-      padding: 5px 14px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--navy-border);
-      border-radius: 100px;
-      font-size: 13px;
-      color: var(--text-secondary);
-      font-weight: 500;
-    }
-
-    /* =========================================
-       SERVICES
-    ========================================= */
-    .services {
-      padding: 100px 0;
-      background: var(--navy-deep);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-    }
-
-    .service-card {
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--gradient);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-    }
-
-    .service-card:hover {
-      border-color: rgba(255,184,0,0.2);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 48px rgba(0,0,0,0.4);
-    }
-
-    .service-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .service-icon {
-      font-size: 40px;
-      margin-bottom: 20px;
-      line-height: 1;
-    }
-
-    .service-icon i {
-      color: var(--gold);
-    }
-
-    .service-card h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .service-card p {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
-
-    .service-features {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .service-feature {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14px;
-      color: var(--text-secondary);
-    }
-
-    .service-feature i {
-      font-size: 12px;
-      color: var(--gold);
-      flex-shrink: 0;
-    }
-
-    .service-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--gold);
-      margin-top: 24px;
-      transition: gap 0.2s;
-    }
-
-    .service-link:hover {
-      gap: 10px;
-    }
-
-    /* =========================================
-       WHY CHOOSE US
-    ========================================= */
-    .why {
-      padding: 100px 0;
-      background: linear-gradient(180deg, var(--navy-mid) 0%, var(--navy-deep) 100%);
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .why-features {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      margin-top: 40px;
-    }
-
-    .why-feature {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
-
-    .why-feature-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(255,184,0,0.15), rgba(255,107,0,0.15));
-      border: 1px solid rgba(255,184,0,0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 20px;
-    }
-
-    .why-feature-icon i {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .why-feature h4 {
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .why-feature p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    .why-visual {
-      position: relative;
-    }
-
-    .why-card-stack {
-      position: relative;
-      height: 420px;
-    }
-
-    .why-card {
-      position: absolute;
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: var(--radius-lg);
-      padding: 28px;
-    }
-
-    .why-card-main {
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 2;
-    }
-
-    .why-card-back {
-      top: 24px;
-      left: 24px;
-      right: -24px;
-      z-index: 1;
-      opacity: 0.5;
-      background: var(--navy-mid);
-    }
-
-    .why-card-title {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .why-card-title .icon-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #22c55e;
-      animation: pulse 2s infinite;
-    }
-
-    .result-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--navy-border);
-      font-size: 14px;
-    }
-
-    .result-row:last-child { border-bottom: none; }
-
-    .result-label {
-      color: var(--text-secondary);
-    }
-
-    .result-value {
-      font-weight: 700;
-      color: #22c55e;
-    }
-
-    .result-value.orange { color: var(--gold); }
-
-    .metrics-row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .metric-box {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--navy-border);
-      border-radius: 10px;
-      padding: 16px;
-      text-align: center;
-    }
-
-    .metric-num {
-      font-size: 28px;
-      font-weight: 800;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .metric-label {
-      font-size: 12px;
-      color: var(--text-secondary);
-      margin-top: 4px;
-    }
-
-    /* =========================================
-       PORTFOLIO
-    ========================================= */
-    .portfolio {
-      padding: 100px 0;
-      background: var(--navy-deep);
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .portfolio-card {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      transition: all 0.3s ease;
-      position: relative;
-      group: true;
-    }
-
-    .portfolio-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(255,184,0,0.2);
-    }
-
-    .portfolio-img {
-      aspect-ratio: 16/10;
-      background: linear-gradient(135deg, var(--navy-mid), var(--navy-light));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .portfolio-img img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-
-    .portfolio-img-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      color: var(--text-muted);
-    }
-
-    .portfolio-img-placeholder i {
-      font-size: 36px;
-      opacity: 0.4;
-    }
-
-    .portfolio-img-placeholder span {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      opacity: 0.5;
-    }
-
-    .portfolio-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,184,0,0.15), rgba(255,107,0,0.15));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .portfolio-card:hover .portfolio-overlay {
-      opacity: 1;
-    }
-
-    .portfolio-overlay-btn {
-      padding: 10px 20px;
-      background: var(--gradient);
-      color: white;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .portfolio-info {
-      padding: 20px 24px;
-    }
-
-    .portfolio-tag {
-      display: inline-block;
-      padding: 3px 10px;
-      background: rgba(255,184,0,0.1);
-      border: 1px solid rgba(255,184,0,0.2);
-      border-radius: 100px;
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
-
-    .portfolio-info h3 {
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .portfolio-info p {
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-
-    .portfolio-cta {
-      text-align: center;
-      margin-top: 48px;
-    }
-
-    /* =========================================
-       PRICING
-    ========================================= */
-    .pricing {
-      padding: 100px 0;
-      background: linear-gradient(180deg, var(--navy-mid) 0%, var(--navy-deep) 100%);
-    }
-
-    .pricing-tabs {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 52px;
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: 12px;
-      padding: 6px;
-      width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .pricing-tab {
-      padding: 10px 24px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      color: var(--text-secondary);
-      border: none;
-      background: transparent;
-      font-family: var(--font);
-    }
-
-    .pricing-tab.active {
-      background: var(--gradient);
-      color: white;
-    }
-
-    .pricing-panel {
-      display: none;
-    }
-
-    .pricing-panel.active {
-      display: block;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      align-items: start;
-    }
-
-    .price-card {
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .price-card:hover {
-      border-color: rgba(255,184,0,0.2);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .price-card.featured {
-      border-color: rgba(255,184,0,0.35);
-      background: linear-gradient(160deg, #071a35 0%, #0c2444 100%);
-    }
-
-    .price-card.featured::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: var(--radius-lg);
-      padding: 1px;
-      background: var(--gradient);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: destination-out;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    .price-badge {
-      display: inline-block;
-      padding: 4px 12px;
-      background: var(--gradient);
-      border-radius: 100px;
-      font-size: 12px;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 20px;
-    }
-
-    .price-name {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .price-desc {
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-
-    .price-amount {
-      margin-bottom: 28px;
-    }
-
-    .price-amount .dollar {
-      font-size: 20px;
-      font-weight: 700;
-      vertical-align: super;
-      line-height: 1;
-      color: var(--text-secondary);
-    }
-
-    .price-amount .number {
-      font-size: 52px;
-      font-weight: 900;
-      line-height: 1;
-    }
-
-    .price-amount .period {
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-left: 4px;
-    }
-
-    .price-divider {
-      height: 1px;
-      background: var(--navy-border);
-      margin-bottom: 24px;
-    }
-
-    .price-features {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 32px;
-    }
-
-    .price-feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 14px;
-      color: var(--text-secondary);
-    }
-
-    .price-feature i.fa-check {
-      color: #22c55e;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    .price-feature i.fa-xmark {
-      color: var(--text-muted);
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    .price-feature.included {
-      color: var(--text-primary);
-    }
-
-    .price-card .btn {
-      width: 100%;
-      justify-content: center;
-    }
-
-    /* Addons table */
-    .addons-section {
-      margin-top: 64px;
-    }
-
-    .addons-title {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 24px;
-      text-align: center;
-    }
-
-    .addons-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-
-    .addon-card {
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: var(--radius);
-      padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .addon-icon {
-      font-size: 20px;
-    }
-
-    .addon-icon i {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .addon-name {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .addon-price {
-      font-size: 13px;
-      color: var(--gold);
-      font-weight: 500;
-    }
-
-    /* =========================================
-       CONTACT
-    ========================================= */
-    .contact {
-      padding: 100px 0;
-      background: var(--navy-deep);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .contact-info {
-      padding-top: 8px;
-    }
-
-    .contact-items {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .contact-item-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(255,184,0,0.15), rgba(255,107,0,0.15));
-      border: 1px solid rgba(255,184,0,0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .contact-item-icon i {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-size: 18px;
-    }
-
-    .contact-item-label {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 4px;
-    }
-
-    .contact-item-value {
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .contact-item-value a {
-      color: var(--text-primary);
-      transition: color 0.2s;
-    }
-
-    .contact-item-value a:hover {
-      color: var(--gold);
-    }
-
-    /* Contact form */
-    .contact-form {
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-    }
-
-    .contact-form h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .contact-form-sub {
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-bottom: 28px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 16px;
-    }
-
-    .form-group label {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-secondary);
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--navy-border);
-      border-radius: 8px;
-      padding: 12px 16px;
-      font-family: var(--font);
-      font-size: 14px;
-      color: var(--text-primary);
-      transition: border-color 0.2s;
-      outline: none;
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: var(--text-muted);
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: rgba(255,184,0,0.4);
-      background: rgba(255,184,0,0.03);
-    }
-
-    .form-group select option {
-      background: var(--navy-card);
-      color: var(--text-primary);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 110px;
-    }
-
-    .form-submit {
-      width: 100%;
-      justify-content: center;
-    }
-
-    /* =========================================
-       FOOTER
-    ========================================= */
-    footer {
-      background: #000912;
-      border-top: 1px solid var(--navy-border);
-      padding: 60px 0 28px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 52px;
-    }
-
-    .footer-brand img {
-      height: 38px;
-      width: auto;
-      margin-bottom: 16px;
-    }
-
-    .footer-brand p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      max-width: 260px;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .footer-social a {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--navy-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: var(--text-secondary);
-      transition: all 0.2s;
-    }
-
-    .footer-social a:hover {
-      background: rgba(255,184,0,0.1);
-      border-color: rgba(255,184,0,0.3);
-      color: var(--gold);
-    }
-
-    .footer-col h4 {
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-    }
-
-    .footer-col ul {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .footer-col li a {
-      font-size: 14px;
-      color: var(--text-muted);
-      transition: color 0.2s;
-    }
-
-    .footer-col li a:hover {
-      color: var(--text-primary);
-    }
-
-    .footer-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 28px;
-      border-top: 1px solid var(--navy-border);
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .footer-copy {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .footer-links a {
-      font-size: 13px;
-      color: var(--text-muted);
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: var(--text-secondary);
-    }
-
-    /* =========================================
-       SCROLL TO TOP
-    ========================================= */
-    .scroll-top {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: var(--gradient);
-      border: none;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-      opacity: 0;
-      transform: translateY(16px);
-      transition: all 0.3s ease;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .scroll-top.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .scroll-top:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(255,107,0,0.4);
-    }
-
-    /* =========================================
-       RESPONSIVE
-    ========================================= */
-    @media (max-width: 1024px) {
-      .why-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
-      }
-
-      .why-visual {
-        display: none;
-      }
-
-      .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .pricing-grid {
-        grid-template-columns: 1fr;
-        max-width: 480px;
+      .container {
+        max-width: 1200px;
         margin: 0 auto;
+        padding: 0 24px;
       }
 
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
+      .section-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: linear-gradient(135deg, #ffb800, #ff6b00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 16px;
       }
 
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links,
-      .nav-cta {
-        display: none;
+      .section-title {
+        font-size: clamp(28px, 4vw, 44px);
+        font-weight: 800;
+        line-height: 1.15;
+        margin-bottom: 16px;
       }
 
-      .hamburger {
-        display: flex;
+      .section-subtitle {
+        font-size: 18px;
+        color: var(--text-secondary);
+        max-width: 580px;
+        line-height: 1.7;
       }
 
-      .mobile-menu.open {
-        display: flex;
+      .section-header {
+        margin-bottom: 60px;
       }
 
-      .hero-stats {
-        gap: 24px;
-      }
-
-      .hero-stat-divider {
-        display: none;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
+      .section-header.centered {
         text-align: center;
       }
 
-      .contact-form {
-        padding: 28px 20px;
+      .section-header.centered .section-subtitle {
+        margin: 0 auto;
       }
-    }
 
-    @media (max-width: 480px) {
-      .hero-actions {
+      .gradient-text {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-family: var(--font);
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: none;
+        text-decoration: none;
+      }
+
+      .btn-primary {
+        background: var(--gradient);
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background: var(--gradient-rev);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(255, 107, 0, 0.35);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--gold);
+        color: var(--gold);
+        transform: translateY(-2px);
+      }
+
+      .btn-lg {
+        padding: 17px 36px;
+        font-size: 16px;
+      }
+
+      /* =========================================
+       NAV
+    ========================================= */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      nav.scrolled {
+        background: rgba(0, 12, 25, 0.95);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--navy-border);
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .nav-logo img {
+        height: 42px;
+        width: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-secondary);
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--text-primary);
+      }
+
+      .nav-cta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hamburger {
+        display: none;
         flex-direction: column;
-        align-items: stretch;
+        gap: 5px;
+        cursor: pointer;
+        padding: 4px;
+        background: none;
+        border: none;
       }
 
-      .hero-actions .btn {
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--text-primary);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 12, 25, 0.98);
+        backdrop-filter: blur(16px);
+        padding: 24px;
+        gap: 20px;
+        border-top: 1px solid var(--navy-border);
+      }
+
+      .mobile-menu a {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--text-secondary);
+        padding: 8px 0;
+        border-bottom: 1px solid var(--navy-border);
+      }
+
+      .mobile-menu a:last-child {
+        border-bottom: none;
+      }
+
+      .mobile-menu .btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
+      }
+
+      /* =========================================
+       HERO
+    ========================================= */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(138deg, #000c19 0%, #002f64 100%);
+        padding-top: 80px;
+      }
+
+      /* Animated grid lines */
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(rgba(255, 184, 0, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 184, 0, 0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+        -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+      }
+
+      /* Glowing orbs */
+      .hero-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.15;
+        animation: float 8s ease-in-out infinite;
+      }
+
+      .hero-orb-1 {
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, #ffb800, transparent);
+        top: -200px;
+        right: -100px;
+      }
+
+      .hero-orb-2 {
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, #ff6b00, transparent);
+        bottom: -100px;
+        left: -100px;
+        animation-delay: -4s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-30px) scale(1.05);
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 760px;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background: rgba(255, 184, 0, 0.1);
+        border: 1px solid rgba(255, 184, 0, 0.25);
+        border-radius: 100px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--gold);
+        margin-bottom: 28px;
+      }
+
+      .hero-badge .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--gold);
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(0.8);
+        }
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 6vw, 72px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: -1px;
+        margin-bottom: 24px;
+      }
+
+      .hero-sub {
+        font-size: 20px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 40px;
+        max-width: 580px;
+      }
+
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .hero-stats {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-top: 64px;
+        padding-top: 40px;
+        border-top: 1px solid var(--navy-border);
+      }
+
+      .hero-stat-num {
+        font-size: 36px;
+        font-weight: 800;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+      }
+
+      .hero-stat-label {
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin-top: 4px;
+      }
+
+      .hero-stat-divider {
+        width: 1px;
+        height: 40px;
+        background: var(--navy-border);
+      }
+
+      /* =========================================
+       TRUSTED BY / SCROLL STRIP
+    ========================================= */
+      .strip {
+        background: var(--navy-card);
+        border-top: 1px solid var(--navy-border);
+        border-bottom: 1px solid var(--navy-border);
+        padding: 20px 0;
+      }
+
+      .strip-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .strip-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-muted);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .strip-divider {
+        width: 1px;
+        height: 20px;
+        background: var(--navy-border);
+      }
+
+      .strip-tags {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .strip-tag {
+        padding: 5px 14px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--navy-border);
+        border-radius: 100px;
+        font-size: 13px;
+        color: var(--text-secondary);
+        font-weight: 500;
+      }
+
+      /* =========================================
+       SERVICES
+    ========================================= */
+      .services {
+        padding: 100px 0;
+        background: var(--navy-deep);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+      }
+
+      .service-card {
+        background: var(--navy-card);
+        border: 1px solid var(--navy-border);
+        border-radius: var(--radius-lg);
+        padding: 36px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--gradient);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover {
+        border-color: rgba(255, 184, 0, 0.2);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+      }
+
+      .service-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .service-icon {
+        font-size: 40px;
+        margin-bottom: 20px;
+        line-height: 1;
+      }
+
+      .service-icon i {
+        color: var(--gold);
+      }
+
+      .service-card h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .service-card p {
+        font-size: 15px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+
+      .service-features {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .service-feature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--text-secondary);
+      }
+
+      .service-feature i {
+        font-size: 12px;
+        color: var(--gold);
+        flex-shrink: 0;
+      }
+
+      .service-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--gold);
+        margin-top: 24px;
+        transition: gap 0.2s;
+      }
+
+      .service-link:hover {
+        gap: 10px;
+      }
+
+      /* =========================================
+       WHY CHOOSE US
+    ========================================= */
+      .why {
+        padding: 100px 0;
+        background: linear-gradient(180deg, var(--navy-mid) 0%, var(--navy-deep) 100%);
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .why-features {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        margin-top: 40px;
+      }
+
+      .why-feature {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+      }
+
+      .why-feature-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(255, 184, 0, 0.15), rgba(255, 107, 0, 0.15));
+        border: 1px solid rgba(255, 184, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 20px;
+      }
+
+      .why-feature-icon i {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .why-feature h4 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      .why-feature p {
+        font-size: 14px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .why-visual {
+        position: relative;
+      }
+
+      .why-card-stack {
+        position: relative;
+        height: 420px;
+      }
+
+      .why-card {
+        position: absolute;
+        background: var(--navy-card);
+        border: 1px solid var(--navy-border);
+        border-radius: var(--radius-lg);
+        padding: 28px;
+      }
+
+      .why-card-main {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+      }
+
+      .why-card-back {
+        top: 24px;
+        left: 24px;
+        right: -24px;
+        z-index: 1;
+        opacity: 0.5;
+        background: var(--navy-mid);
+      }
+
+      .why-card-title {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .why-card-title .icon-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #22c55e;
+        animation: pulse 2s infinite;
+      }
+
+      .result-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--navy-border);
+        font-size: 14px;
+      }
+
+      .result-row:last-child {
+        border-bottom: none;
+      }
+
+      .result-label {
+        color: var(--text-secondary);
+      }
+
+      .result-value {
+        font-weight: 700;
+        color: #22c55e;
+      }
+
+      .result-value.orange {
+        color: var(--gold);
+      }
+
+      .metrics-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .metric-box {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--navy-border);
+        border-radius: 10px;
+        padding: 16px;
+        text-align: center;
+      }
+
+      .metric-num {
+        font-size: 28px;
+        font-weight: 800;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .metric-label {
+        font-size: 12px;
+        color: var(--text-secondary);
+        margin-top: 4px;
+      }
+
+      /* =========================================
+       PORTFOLIO
+    ========================================= */
+      .portfolio {
+        padding: 100px 0;
+        background: var(--navy-deep);
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+
+      .portfolio-card {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background: var(--navy-card);
+        border: 1px solid var(--navy-border);
+        transition: all 0.3s ease;
+        position: relative;
+        group: true;
+      }
+
+      .portfolio-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+        border-color: rgba(255, 184, 0, 0.2);
+      }
+
+      .portfolio-img {
+        aspect-ratio: 16/10;
+        background: linear-gradient(135deg, var(--navy-mid), var(--navy-light));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .portfolio-img img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+      }
+
+      .portfolio-img-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        color: var(--text-muted);
+      }
+
+      .portfolio-img-placeholder i {
+        font-size: 36px;
+        opacity: 0.4;
+      }
+
+      .portfolio-img-placeholder span {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: 0.5;
+      }
+
+      .portfolio-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255, 184, 0, 0.15), rgba(255, 107, 0, 0.15));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .portfolio-card:hover .portfolio-overlay {
+        opacity: 1;
+      }
+
+      .portfolio-overlay-btn {
+        padding: 10px 20px;
+        background: var(--gradient);
+        color: white;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .portfolio-info {
+        padding: 20px 24px;
+      }
+
+      .portfolio-tag {
+        display: inline-block;
+        padding: 3px 10px;
+        background: rgba(255, 184, 0, 0.1);
+        border: 1px solid rgba(255, 184, 0, 0.2);
+        border-radius: 100px;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+      }
+
+      .portfolio-info h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      .portfolio-info p {
+        font-size: 13px;
+        color: var(--text-secondary);
+      }
+
+      .portfolio-cta {
+        text-align: center;
+        margin-top: 48px;
+      }
+
+      /* =========================================
+       PRICING
+    ========================================= */
+      .pricing {
+        padding: 100px 0;
+        background: linear-gradient(180deg, var(--navy-mid) 0%, var(--navy-deep) 100%);
+      }
+
+      .pricing-tabs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 52px;
+        background: var(--navy-card);
+        border: 1px solid var(--navy-border);
+        border-radius: 12px;
+        padding: 6px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .pricing-tab {
+        padding: 10px 24px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        color: var(--text-secondary);
+        border: none;
+        background: transparent;
+        font-family: var(--font);
+      }
+
+      .pricing-tab.active {
+        background: var(--gradient);
+        color: white;
+      }
+
+      .pricing-panel {
+        display: none;
+      }
+
+      .pricing-panel.active {
+        display: block;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        align-items: start;
+      }
+
+      .price-card {
+        background: var(--navy-card);
+        border: 1px solid var(--navy-border);
+        border-radius: var(--radius-lg);
+        padding: 36px;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .price-card:hover {
+        border-color: rgba(255, 184, 0, 0.2);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .price-card.featured {
+        border-color: rgba(255, 184, 0, 0.35);
+        background: linear-gradient(160deg, #071a35 0%, #0c2444 100%);
+      }
+
+      .price-card.featured::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius-lg);
+        padding: 1px;
+        background: var(--gradient);
+        -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      .price-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        background: var(--gradient);
+        border-radius: 100px;
+        font-size: 12px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .price-name {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .price-desc {
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        line-height: 1.6;
+      }
+
+      .price-amount {
+        margin-bottom: 28px;
+      }
+
+      .price-amount .dollar {
+        font-size: 20px;
+        font-weight: 700;
+        vertical-align: super;
+        line-height: 1;
+        color: var(--text-secondary);
+      }
+
+      .price-amount .number {
+        font-size: 52px;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .price-amount .period {
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin-left: 4px;
+      }
+
+      .price-divider {
+        height: 1px;
+        background: var(--navy-border);
+        margin-bottom: 24px;
+      }
+
+      .price-features {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .price-feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--text-secondary);
+      }
+
+      .price-feature i.fa-check {
+        color: #22c55e;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+
+      .price-feature i.fa-xmark {
+        color: var(--text-muted);
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+
+      .price-feature.included {
+        color: var(--text-primary);
+      }
+
+      .price-card .btn {
         width: 100%;
         justify-content: center;
       }
 
-      .hero-stats {
+      /* Addons table */
+      .addons-section {
+        margin-top: 64px;
+      }
+
+      .addons-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      .addons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+      }
+
+      .addon-card {
+        background: var(--navy-card);
+        border: 1px solid var(--navy-border);
+        border-radius: var(--radius);
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .addon-icon {
+        font-size: 20px;
+      }
+
+      .addon-icon i {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .addon-name {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .addon-price {
+        font-size: 13px;
+        color: var(--gold);
+        font-weight: 500;
+      }
+
+      /* =========================================
+       CONTACT
+    ========================================= */
+      .contact {
+        padding: 100px 0;
+        background: var(--navy-deep);
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      .contact-info {
+        padding-top: 8px;
+      }
+
+      .contact-items {
+        display: flex;
         flex-direction: column;
+        gap: 24px;
+        margin-top: 40px;
+      }
+
+      .contact-item {
+        display: flex;
         align-items: flex-start;
+        gap: 16px;
       }
 
-      .pricing-tabs {
+      .contact-item-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(255, 184, 0, 0.15), rgba(255, 107, 0, 0.15));
+        border: 1px solid rgba(255, 184, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .contact-item-icon i {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 18px;
+      }
+
+      .contact-item-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+      }
+
+      .contact-item-value {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .contact-item-value a {
+        color: var(--text-primary);
+        transition: color 0.2s;
+      }
+
+      .contact-item-value a:hover {
+        color: var(--gold);
+      }
+
+      /* Contact form */
+      .contact-form {
+        background: var(--navy-card);
+        border: 1px solid var(--navy-border);
+        border-radius: var(--radius-lg);
+        padding: 40px;
+      }
+
+      .contact-form h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .contact-form-sub {
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin-bottom: 28px;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 16px;
+      }
+
+      .form-group label {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-secondary);
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--navy-border);
+        border-radius: 8px;
+        padding: 12px 16px;
+        font-family: var(--font);
+        font-size: 14px;
+        color: var(--text-primary);
+        transition: border-color 0.2s;
+        outline: none;
+      }
+
+      .form-group input::placeholder,
+      .form-group textarea::placeholder {
+        color: var(--text-muted);
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: rgba(255, 184, 0, 0.4);
+        background: rgba(255, 184, 0, 0.03);
+      }
+
+      .form-group select option {
+        background: var(--navy-card);
+        color: var(--text-primary);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 110px;
+      }
+
+      .form-submit {
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* =========================================
+       FOOTER
+    ========================================= */
+      footer {
+        background: #000912;
+        border-top: 1px solid var(--navy-border);
+        padding: 60px 0 28px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 48px;
+        margin-bottom: 52px;
+      }
+
+      .footer-brand img {
+        height: 38px;
+        width: auto;
+        margin-bottom: 16px;
+      }
+
+      .footer-brand p {
+        font-size: 14px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        max-width: 260px;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .footer-social a {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--navy-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: var(--text-secondary);
+        transition: all 0.2s;
+      }
+
+      .footer-social a:hover {
+        background: rgba(255, 184, 0, 0.1);
+        border-color: rgba(255, 184, 0, 0.3);
+        color: var(--gold);
+      }
+
+      .footer-col h4 {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+      }
+
+      .footer-col ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-col li a {
+        font-size: 14px;
+        color: var(--text-muted);
+        transition: color 0.2s;
+      }
+
+      .footer-col li a:hover {
+        color: var(--text-primary);
+      }
+
+      .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 28px;
+        border-top: 1px solid var(--navy-border);
         flex-wrap: wrap;
+        gap: 16px;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <!-- ==================== NAV ==================== -->
-  <nav id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <img src="assets/img/logo2.png" alt="Pixelfast Digital">
-      </a>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="nav-cta">
-        <a href="tel:+1" class="btn btn-outline" style="padding:10px 20px;font-size:13px;">
-          <i class="fas fa-phone"></i> Call Us
-        </a>
-        <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:13px;">
-          Get Free Quote
-        </a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#services" onclick="closeMobile()">Services</a>
-      <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
-      <a href="#pricing" onclick="closeMobile()">Pricing</a>
-      <a href="#contact" onclick="closeMobile()">Contact</a>
-      <a href="#contact" class="btn btn-primary" onclick="closeMobile()">Get Free Quote</a>
-    </div>
-  </nav>
+      .footer-copy {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
 
-  <!-- ==================== HERO ==================== -->
-  <section class="hero" id="home">
-    <div class="hero-orb hero-orb-1"></div>
-    <div class="hero-orb hero-orb-2"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Websites &bull; SEO &bull; Digital Services
-        </div>
-        <h1>
-          Grow Your Business<br>
-          <span class="gradient-text">Online — Fast.</span>
-        </h1>
-        <p class="hero-sub">
-          Professional websites, results-driven SEO, and digital marketing that actually work for small businesses. No fluff — just results.
-        </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary btn-lg">
-            <i class="fas fa-rocket"></i> Get a Free Quote
-          </a>
-          <a href="#portfolio" class="btn btn-outline btn-lg">
-            <i class="fas fa-eye"></i> View Our Work
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div>
-            <div class="hero-stat-num">100+</div>
-            <div class="hero-stat-label">Projects Completed</div>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div>
-            <div class="hero-stat-num">5★</div>
-            <div class="hero-stat-label">Client Rating</div>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div>
-            <div class="hero-stat-num">Fast</div>
-            <div class="hero-stat-label">Turnaround</div>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div>
-            <div class="hero-stat-num">24/7</div>
-            <div class="hero-stat-label">Support</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      .footer-links {
+        display: flex;
+        gap: 24px;
+      }
 
-  <!-- ==================== STRIP ==================== -->
-  <div class="strip">
-    <div class="strip-inner">
-      <span class="strip-label">We Help Businesses With</span>
-      <div class="strip-divider"></div>
-      <div class="strip-tags">
-        <span class="strip-tag">Web Design</span>
-        <span class="strip-tag">WordPress</span>
-        <span class="strip-tag">Local SEO</span>
-        <span class="strip-tag">Google Business</span>
-        <span class="strip-tag">E-Commerce</span>
-        <span class="strip-tag">Website Fixes</span>
-        <span class="strip-tag">Web Hosting</span>
-        <span class="strip-tag">Speed Optimization</span>
-      </div>
-    </div>
-  </div>
+      .footer-links a {
+        font-size: 13px;
+        color: var(--text-muted);
+        transition: color 0.2s;
+      }
 
-  <!-- ==================== SERVICES ==================== -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label"><i class="fas fa-bolt"></i> What We Do</div>
-        <h2 class="section-title">Everything Your Business<br>Needs Online</h2>
-        <p class="section-subtitle">From a brand-new website to getting found on Google — we handle it all so you can focus on running your business.</p>
-      </div>
-      <div class="services-grid">
+      .footer-links a:hover {
+        color: var(--text-secondary);
+      }
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-          <h3>Web Design &amp; Development</h3>
-          <p>Custom, mobile-first websites that look great and convert visitors into customers. Fast, secure, and built to rank.</p>
-          <div class="service-features">
-            <div class="service-feature"><i class="fas fa-check"></i> Custom responsive design</div>
-            <div class="service-feature"><i class="fas fa-check"></i> WordPress or static builds</div>
-            <div class="service-feature"><i class="fas fa-check"></i> SEO-ready from day one</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Contact forms &amp; integrations</div>
-          </div>
-          <a href="#pricing" class="service-link">See pricing <i class="fas fa-arrow-right"></i></a>
-        </div>
+      /* =========================================
+       SCROLL TO TOP
+    ========================================= */
+      .scroll-top {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: var(--gradient);
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(16px);
+        transition: all 0.3s ease;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
-          <h3>Search Engine Optimization</h3>
-          <p>Rank higher on Google and get found by customers actively searching for your services — locally and beyond.</p>
-          <div class="service-features">
-            <div class="service-feature"><i class="fas fa-check"></i> Keyword research &amp; strategy</div>
-            <div class="service-feature"><i class="fas fa-check"></i> On-page &amp; technical SEO</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Local SEO &amp; citations</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Monthly performance reports</div>
-          </div>
-          <a href="#pricing" class="service-link">See pricing <i class="fas fa-arrow-right"></i></a>
-        </div>
+      .scroll-top.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fab fa-google"></i></div>
-          <h3>Google Business Profile</h3>
-          <p>Get found in Google Maps and local search results. We set up, optimize, and manage your Google Business Profile for maximum visibility.</p>
-          <div class="service-features">
-            <div class="service-feature"><i class="fas fa-check"></i> Profile setup &amp; verification</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Photo &amp; content optimization</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Review strategy &amp; management</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Q&amp;A and post management</div>
-          </div>
-          <a href="#pricing" class="service-link">See pricing <i class="fas fa-arrow-right"></i></a>
-        </div>
+      .scroll-top:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(255, 107, 0, 0.4);
+      }
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-wrench"></i></div>
-          <h3>Website Fixes &amp; Updates</h3>
-          <p>Something broken? Need a quick update? We fix WordPress issues, broken layouts, plugin problems, and more — fast.</p>
-          <div class="service-features">
-            <div class="service-feature"><i class="fas fa-check"></i> WordPress troubleshooting</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Plugin &amp; theme updates</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Bug fixes &amp; layout repairs</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Speed &amp; performance fixes</div>
-          </div>
-          <a href="#contact" class="service-link">Get a fix <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-server"></i></div>
-          <h3>Web Hosting</h3>
-          <p>Fast, reliable hosting managed for your business. We handle the technical side so your site stays online and loads quickly.</p>
-          <div class="service-features">
-            <div class="service-feature"><i class="fas fa-check"></i> Managed WordPress hosting</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Free SSL certificate</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Daily backups</div>
-            <div class="service-feature"><i class="fas fa-check"></i> 99.9% uptime guarantee</div>
-          </div>
-          <a href="#pricing" class="service-link">See pricing <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
-          <h3>Website Maintenance</h3>
-          <p>Keep your site healthy, secure, and up to date month after month. We monitor, maintain, and support your website so you don't have to.</p>
-          <div class="service-features">
-            <div class="service-feature"><i class="fas fa-check"></i> Security monitoring</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Regular updates &amp; backups</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Monthly content changes</div>
-            <div class="service-feature"><i class="fas fa-check"></i> Analytics reporting</div>
-          </div>
-          <a href="#pricing" class="service-link">See pricing <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== WHY US ==================== -->
-  <section class="why" id="about">
-    <div class="container">
-      <div class="why-grid">
-        <div>
-          <div class="section-label"><i class="fas fa-star"></i> Why Pixelfast</div>
-          <h2 class="section-title">We're in Your Corner,<br>Not Just Your Inbox</h2>
-          <p class="section-subtitle" style="margin-bottom:0;">You deserve a digital partner who actually picks up the phone, delivers on time, and cares about your results — not just your invoice.</p>
-          <div class="why-features">
-            <div class="why-feature">
-              <div class="why-feature-icon"><i class="fas fa-bolt"></i></div>
-              <div>
-                <h4>Fast Turnaround</h4>
-                <p>Most projects launched within 1–2 weeks. No waiting months for a basic website.</p>
-              </div>
-            </div>
-            <div class="why-feature">
-              <div class="why-feature-icon"><i class="fas fa-hand-holding-dollar"></i></div>
-              <div>
-                <h4>Transparent Pricing</h4>
-                <p>No hidden fees, no surprise invoices. You know exactly what you're paying for.</p>
-              </div>
-            </div>
-            <div class="why-feature">
-              <div class="why-feature-icon"><i class="fas fa-chart-line"></i></div>
-              <div>
-                <h4>Results-Focused</h4>
-                <p>A pretty site that doesn't generate business is useless. We build sites that convert and rank.</p>
-              </div>
-            </div>
-            <div class="why-feature">
-              <div class="why-feature-icon"><i class="fas fa-headset"></i></div>
-              <div>
-                <h4>Real Support</h4>
-                <p>You'll always have a real person to reach out to — not a ticket system or offshore call center.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="why-visual">
-          <div class="why-card-stack">
-            <div class="why-card why-card-back"></div>
-            <div class="why-card why-card-main">
-              <div class="why-card-title">
-                <span class="icon-dot"></span>
-                Client Results Overview
-              </div>
-              <div class="result-row">
-                <span class="result-label">Google Rankings</span>
-                <span class="result-value">↑ Page 1</span>
-              </div>
-              <div class="result-row">
-                <span class="result-label">Site Load Time</span>
-                <span class="result-value">↓ &lt; 2s</span>
-              </div>
-              <div class="result-row">
-                <span class="result-label">Monthly Visitors</span>
-                <span class="result-value">↑ +340%</span>
-              </div>
-              <div class="result-row">
-                <span class="result-label">Lead Form Conversions</span>
-                <span class="result-value orange">↑ +210%</span>
-              </div>
-              <div class="metrics-row">
-                <div class="metric-box">
-                  <div class="metric-num">100+</div>
-                  <div class="metric-label">Sites Built</div>
-                </div>
-                <div class="metric-box">
-                  <div class="metric-num">5★</div>
-                  <div class="metric-label">Avg. Rating</div>
-                </div>
-                <div class="metric-box">
-                  <div class="metric-num">98%</div>
-                  <div class="metric-label">Client Retention</div>
-                </div>
-                <div class="metric-box">
-                  <div class="metric-num">2wk</div>
-                  <div class="metric-label">Avg. Launch</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== PORTFOLIO ==================== -->
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <div class="section-header centered">
-        <div class="section-label"><i class="fas fa-images"></i> Our Work</div>
-        <h2 class="section-title">Recent Projects</h2>
-        <p class="section-subtitle">A sample of websites and digital projects we've built for small businesses across various industries.</p>
-      </div>
-      <div class="portfolio-grid">
-
-        <div class="portfolio-card">
-          <a href="https://pixelfast.com/cafemollie/" target="_blank" rel="noopener">
-            <div class="portfolio-img">
-              <img src="assets/img/cafemollie.com.png" alt="Cafe Mollie website">
-              <div class="portfolio-overlay">
-                <span class="portfolio-overlay-btn">View Live Site</span>
-              </div>
-            </div>
-          </a>
-          <div class="portfolio-info">
-            <span class="portfolio-tag">Web Design</span>
-            <h3>Cafe Mollie</h3>
-            <p>Restaurant website with menu &amp; online presence</p>
-          </div>
-        </div>
-
-        <div class="portfolio-card">
-          <a href="https://arizonayarddoctors.com" target="_blank" rel="noopener">
-            <div class="portfolio-img">
-              <img src="assets/img/arizonayarddoctors.com.png" alt="Arizona Yard Doctors website">
-              <div class="portfolio-overlay">
-                <span class="portfolio-overlay-btn">View Live Site</span>
-              </div>
-            </div>
-          </a>
-          <div class="portfolio-info">
-            <span class="portfolio-tag">Web Design + SEO</span>
-            <h3>Arizona Yard Doctors</h3>
-            <p>Landscaping &amp; yard services lead generation site</p>
-          </div>
-        </div>
-
-        <div class="portfolio-card">
-          <a href="https://mccormicklendinggroup.com" target="_blank" rel="noopener">
-            <div class="portfolio-img">
-              <img src="assets/img/mccormicklendinggroup.com.png" alt="McCormick Lending Group website">
-              <div class="portfolio-overlay">
-                <span class="portfolio-overlay-btn">View Live Site</span>
-              </div>
-            </div>
-          </a>
-          <div class="portfolio-info">
-            <span class="portfolio-tag">Web Design</span>
-            <h3>McCormick Lending Group</h3>
-            <p>Professional mortgage &amp; lending services website</p>
-          </div>
-        </div>
-
-        <div class="portfolio-card">
-          <a href="https://cribpost.com" target="_blank" rel="noopener">
-            <div class="portfolio-img">
-              <img src="assets/img/cribpost.com.png" alt="CribPost website">
-              <div class="portfolio-overlay">
-                <span class="portfolio-overlay-btn">View Live Site</span>
-              </div>
-            </div>
-          </a>
-          <div class="portfolio-info">
-            <span class="portfolio-tag">Web App</span>
-            <h3>CribPost</h3>
-            <p>Real estate listings &amp; property platform</p>
-          </div>
-        </div>
-
-        <div class="portfolio-card">
-          <a href="https://emailflyers.net" target="_blank" rel="noopener">
-            <div class="portfolio-img">
-              <img src="assets/img/emailfleyrs.net.png" alt="Email Flyers website">
-              <div class="portfolio-overlay">
-                <span class="portfolio-overlay-btn">View Live Site</span>
-              </div>
-            </div>
-          </a>
-          <div class="portfolio-info">
-            <span class="portfolio-tag">Web Design</span>
-            <h3>Email Flyers</h3>
-            <p>Email marketing platform &amp; service website</p>
-          </div>
-        </div>
-
-        <div class="portfolio-card">
-          <a href="https://pixelfast.com/listing-websites/" target="_blank" rel="noopener">
-            <div class="portfolio-img">
-              <img src="assets/img/wisterialane.png" alt="Wisteria Lane listing website">
-              <div class="portfolio-overlay">
-                <span class="portfolio-overlay-btn">View Live Site</span>
-              </div>
-            </div>
-          </a>
-          <div class="portfolio-info">
-            <span class="portfolio-tag">Web Design</span>
-            <h3>Wisteria Lane</h3>
-            <p>Property listing &amp; real estate showcase site</p>
-          </div>
-        </div>
-
-        <div class="portfolio-card">
-          <a href="https://pixelfast.com/listing-websites/?v=2" target="_blank" rel="noopener">
-            <div class="portfolio-img">
-              <img src="assets/img/wisterialane2.png" alt="Wisteria Lane v2 listing website">
-              <div class="portfolio-overlay">
-                <span class="portfolio-overlay-btn">View Live Site</span>
-              </div>
-            </div>
-          </a>
-          <div class="portfolio-info">
-            <span class="portfolio-tag">Web Design</span>
-            <h3>Wisteria Lane v2</h3>
-            <p>Redesigned property listing website</p>
-          </div>
-        </div>
-
-      </div>
-      <div class="portfolio-cta">
-        <p style="color:var(--text-secondary);margin-bottom:20px;font-size:15px;">Ready to add your business here?</p>
-        <a href="#contact" class="btn btn-primary btn-lg">
-          <i class="fas fa-rocket"></i> Start Your Project
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== PRICING ==================== -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="section-header centered">
-        <div class="section-label"><i class="fas fa-tag"></i> Pricing</div>
-        <h2 class="section-title">Simple, Transparent Pricing</h2>
-        <p class="section-subtitle">No surprises, no upsells. Choose the package that fits your business and budget.</p>
-      </div>
-
-      <div class="pricing-tabs">
-        <button class="pricing-tab active" onclick="switchTab('websites')">Website Packages</button>
-        <button class="pricing-tab" onclick="switchTab('seo')">SEO Packages</button>
-        <button class="pricing-tab" onclick="switchTab('maintenance')">Maintenance</button>
-      </div>
-
-      <!-- WEBSITES -->
-      <div class="pricing-panel active" id="tab-websites">
-        <div class="pricing-grid">
-
-          <div class="price-card">
-            <div class="price-name">Starter Site</div>
-            <div class="price-desc">Perfect for businesses that need a clean, professional online presence — fast.</div>
-            <div class="price-amount">
-              <span class="dollar">$</span><span class="number">799</span>
-            </div>
-            <div class="price-divider"></div>
-            <div class="price-features">
-              <div class="price-feature included"><i class="fas fa-check"></i> Up to 5 pages</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Mobile-responsive design</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Contact form</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Basic on-page SEO</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Google Analytics setup</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> 30-day support</div>
-              <div class="price-feature"><i class="fas fa-xmark"></i> Blog / news section</div>
-              <div class="price-feature"><i class="fas fa-xmark"></i> E-commerce ready</div>
-            </div>
-            <a href="#contact" class="btn btn-outline">Get Started</a>
-          </div>
-
-          <div class="price-card featured">
-            <div class="price-badge">Most Popular</div>
-            <div class="price-name">Business Site</div>
-            <div class="price-desc">A full-featured website built to grow your business and dominate local search.</div>
-            <div class="price-amount">
-              <span class="dollar">$</span><span class="number gradient-text">1,499</span>
-            </div>
-            <div class="price-divider"></div>
-            <div class="price-features">
-              <div class="price-feature included"><i class="fas fa-check"></i> Up to 10 pages</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Custom design &amp; branding</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Blog / news section</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Full on-page SEO</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Google Analytics &amp; Search Console</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Google Business setup</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> 60-day support</div>
-              <div class="price-feature"><i class="fas fa-xmark"></i> E-commerce / online store</div>
-            </div>
-            <a href="#contact" class="btn btn-primary">Get Started</a>
-          </div>
-
-          <div class="price-card">
-            <div class="price-name">Premium Site</div>
-            <div class="price-desc">A fully custom build for businesses that want the best — with e-commerce and everything included.</div>
-            <div class="price-amount">
-              <span class="dollar">$</span><span class="number">2,499</span>
-            </div>
-            <div class="price-divider"></div>
-            <div class="price-features">
-              <div class="price-feature included"><i class="fas fa-check"></i> Unlimited pages</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Fully custom design</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> E-commerce / WooCommerce</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Advanced SEO package</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Speed &amp; Core Web Vitals optimization</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Google Business + review strategy</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> 90-day support</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> 1 month free maintenance</div>
-            </div>
-            <a href="#contact" class="btn btn-outline">Get Started</a>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- SEO -->
-      <div class="pricing-panel" id="tab-seo">
-        <div class="pricing-grid">
-
-          <div class="price-card">
-            <div class="price-name">Local Boost</div>
-            <div class="price-desc">Get found in local search and Google Maps. Perfect for brick-and-mortar businesses.</div>
-            <div class="price-amount">
-              <span class="dollar">$</span><span class="number">299</span><span class="period">/mo</span>
-            </div>
-            <div class="price-divider"></div>
-            <div class="price-features">
-              <div class="price-feature included"><i class="fas fa-check"></i> Google Business optimization</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Local citation building</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> On-page SEO (up to 5 pages)</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Monthly ranking report</div>
-              <div class="price-feature"><i class="fas fa-xmark"></i> Link building</div>
-              <div class="price-feature"><i class="fas fa-xmark"></i> Content creation</div>
-            </div>
-            <a href="#contact" class="btn btn-outline">Get Started</a>
-          </div>
-
-          <div class="price-card featured">
-            <div class="price-badge">Most Popular</div>
-            <div class="price-name">SEO Growth</div>
-            <div class="price-desc">Full-service SEO for businesses ready to dominate search results in their market.</div>
-            <div class="price-amount">
-              <span class="dollar">$</span><span class="number gradient-text">599</span><span class="period">/mo</span>
-            </div>
-            <div class="price-divider"></div>
-            <div class="price-features">
-              <div class="price-feature included"><i class="fas fa-check"></i> Everything in Local Boost</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Full on-page &amp; technical SEO</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Keyword research &amp; strategy</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Link building &amp; outreach</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> 2 blog posts/month</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Bi-weekly reports</div>
-            </div>
-            <a href="#contact" class="btn btn-primary">Get Started</a>
-          </div>
-
-          <div class="price-card">
-            <div class="price-name">SEO Pro</div>
-            <div class="price-desc">Comprehensive SEO with a dedicated manager and full content strategy for aggressive growth.</div>
-            <div class="price-amount">
-              <span class="dollar">$</span><span class="number">999</span><span class="period">/mo</span>
-            </div>
-            <div class="price-divider"></div>
-            <div class="price-features">
-              <div class="price-feature included"><i class="fas fa-check"></i> Everything in SEO Growth</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Dedicated account manager</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Competitor analysis &amp; tracking</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> 4 blog posts/month</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Technical SEO audits</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Weekly reports &amp; strategy calls</div>
-            </div>
-            <a href="#contact" class="btn btn-outline">Get Started</a>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- MAINTENANCE -->
-      <div class="pricing-panel" id="tab-maintenance">
-        <div class="pricing-grid">
-
-          <div class="price-card">
-            <div class="price-name">Basic Care</div>
-            <div class="price-desc">Keep your site healthy and secure without lifting a finger.</div>
-            <div class="price-amount">
-              <span class="dollar">$</span><span class="number">99</span><span class="period">/mo</span>
-            </div>
-            <div class="price-divider"></div>
-            <div class="price-features">
-              <div class="price-feature included"><i class="fas fa-check"></i> WordPress core updates</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Plugin &amp; theme updates</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Daily backups</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Uptime monitoring</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Security scanning</div>
-              <div class="price-feature"><i class="fas fa-xmark"></i> Content changes</div>
-              <div class="price-feature"><i class="fas fa-xmark"></i> Monthly report</div>
-            </div>
-            <a href="#contact" class="btn btn-outline">Get Started</a>
-          </div>
-
-          <div class="price-card featured">
-            <div class="price-badge">Most Popular</div>
-            <div class="price-name">Pro Care</div>
-            <div class="price-desc">Everything you need to keep your site fresh, fast, and generating business.</div>
-            <div class="price-amount">
-              <span class="dollar">$</span><span class="number gradient-text">199</span><span class="period">/mo</span>
-            </div>
-            <div class="price-divider"></div>
-            <div class="price-features">
-              <div class="price-feature included"><i class="fas fa-check"></i> Everything in Basic Care</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Up to 2 hrs content changes/mo</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Monthly analytics report</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Performance optimization</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Priority support</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Discounted hourly rate</div>
-            </div>
-            <a href="#contact" class="btn btn-primary">Get Started</a>
-          </div>
-
-          <div class="price-card">
-            <div class="price-name">Hosting</div>
-            <div class="price-desc">Managed WordPress hosting — fast, secure, and hassle-free.</div>
-            <div class="price-amount">
-              <span class="dollar">$</span><span class="number">25</span><span class="period">/mo</span>
-            </div>
-            <div class="price-divider"></div>
-            <div class="price-features">
-              <div class="price-feature included"><i class="fas fa-check"></i> Managed WordPress hosting</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Free SSL certificate</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> CDN &amp; caching included</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> 99.9% uptime SLA</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Daily backups</div>
-              <div class="price-feature included"><i class="fas fa-check"></i> Malware protection</div>
-            </div>
-            <a href="#contact" class="btn btn-outline">Get Started</a>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Addons -->
-      <div class="addons-section">
-        <p class="addons-title">À La Carte Services</p>
-        <div class="addons-grid">
-          <div class="addon-card">
-            <div class="addon-icon"><i class="fab fa-google"></i></div>
-            <div>
-              <div class="addon-name">Google Business Setup</div>
-              <div class="addon-price">$199 one-time</div>
-            </div>
-          </div>
-          <div class="addon-card">
-            <div class="addon-icon"><i class="fas fa-tools"></i></div>
-            <div>
-              <div class="addon-name">Website Fix / Hourly Work</div>
-              <div class="addon-price">$75/hour</div>
-            </div>
-          </div>
-          <div class="addon-card">
-            <div class="addon-icon"><i class="fas fa-tachometer-alt"></i></div>
-            <div>
-              <div class="addon-name">Speed Optimization</div>
-              <div class="addon-price">$199 one-time</div>
-            </div>
-          </div>
-          <div class="addon-card">
-            <div class="addon-icon"><i class="fas fa-file-alt"></i></div>
-            <div>
-              <div class="addon-name">Landing Page</div>
-              <div class="addon-price">Starting at $299</div>
-            </div>
-          </div>
-          <div class="addon-card">
-            <div class="addon-icon"><i class="fas fa-pen-nib"></i></div>
-            <div>
-              <div class="addon-name">Blog Post / Content</div>
-              <div class="addon-price">Starting at $75/post</div>
-            </div>
-          </div>
-          <div class="addon-card">
-            <div class="addon-icon"><i class="fas fa-exchange-alt"></i></div>
-            <div>
-              <div class="addon-name">Website Migration</div>
-              <div class="addon-price">Starting at $149</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== CONTACT ==================== -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="section-label"><i class="fas fa-envelope"></i> Get In Touch</div>
-          <h2 class="section-title">Let's Build Something<br>Great Together</h2>
-          <p class="section-subtitle">Have a project in mind? Want a free quote? Fill out the form and I'll get back to you within 1 business day.</p>
-          <div class="contact-items">
-            <div class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <div class="contact-item-label">Email</div>
-                <div class="contact-item-value">
-                  <a href="mailto:michael@pixelfast.com">michael@pixelfast.com</a>
-                </div>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-globe"></i></div>
-              <div>
-                <div class="contact-item-label">Website</div>
-                <div class="contact-item-value">
-                  <a href="https://pixelfast.com">pixelfast.com</a>
-                </div>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
-              <div>
-                <div class="contact-item-label">Response Time</div>
-                <div class="contact-item-value">Within 1 business day</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="contact-form">
-          <h3>Get Your Free Quote</h3>
-          <p class="contact-form-sub">No obligation. Tell us what you need and we'll put together a custom proposal.</p>
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Jane Smith" required>
-              </div>
-              <div class="form-group">
-                <label for="business">Business Name</label>
-                <input type="text" id="business" name="business" placeholder="Acme Co.">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="jane@example.com" required>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone (optional)</label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="service">Service Interested In</label>
-              <select id="service" name="service">
-                <option value="">Select a service...</option>
-                <option>Web Design &amp; Development</option>
-                <option>SEO</option>
-                <option>Google Business Profile</option>
-                <option>Website Fix / Update</option>
-                <option>Web Hosting</option>
-                <option>Website Maintenance</option>
-                <option>Not sure yet — need advice</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Tell Us About Your Project</label>
-              <textarea id="message" name="message" placeholder="What's your website for? Do you have an existing site? What's your timeline and budget? The more detail, the better!"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg form-submit">
-              <i class="fas fa-paper-plane"></i> Send My Free Quote Request
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="assets/img/logo2.png" alt="Pixelfast Digital">
-          <p>Professional web design, SEO, and digital services that help small businesses grow online — fast, affordable, and results-driven.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Web Design &amp; Dev</a></li>
-            <li><a href="#services">SEO</a></li>
-            <li><a href="#services">Google Business</a></li>
-            <li><a href="#services">Website Fixes</a></li>
-            <li><a href="#services">Web Hosting</a></li>
-            <li><a href="#services">Maintenance</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#contact">Free Quote</a></li>
-            <li><a href="#pricing">Pricing Guide</a></li>
-            <li><a href="mailto:michael@pixelfast.com">Email Us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-copy">&copy; <span id="year"></span> Pixelfast Digital. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll To Top -->
-  <button class="scroll-top" id="scrollTop" aria-label="Back to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- ==================== SCRIPTS ==================== -->
-  <script>
-    // Dynamic copyright year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Sticky nav
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 40);
-      document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
-    });
-
-    // Mobile menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-    });
-
-    function closeMobile() {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    }
-
-    // Pricing tabs
-    function switchTab(tab) {
-      document.querySelectorAll('.pricing-tab').forEach((t, i) => {
-        const tabs = ['websites', 'seo', 'maintenance'];
-        t.classList.toggle('active', tabs[i] === tab);
-      });
-      document.querySelectorAll('.pricing-panel').forEach(p => {
-        p.classList.toggle('active', p.id === 'tab-' + tab);
-      });
-    }
-
-    // Scroll to top
-    document.getElementById('scrollTop').addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Smooth anchor scrolling with nav offset
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          const offset = 80;
-          window.scrollTo({
-            top: target.getBoundingClientRect().top + window.scrollY - offset,
-            behavior: 'smooth'
-          });
+      /* =========================================
+       RESPONSIVE
+    ========================================= */
+      @media (max-width: 1024px) {
+        .why-grid {
+          grid-template-columns: 1fr;
+          gap: 60px;
         }
-      });
-    });
 
-    // Subtle scroll-in animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+        .why-visual {
+          display: none;
         }
-      });
-    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.service-card, .price-card, .portfolio-card, .why-feature, .addon-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      observer.observe(el);
-    });
-  </script>
-</body>
+        .portfolio-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .pricing-grid {
+          grid-template-columns: 1fr;
+          max-width: 480px;
+          margin: 0 auto;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 60px;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links,
+        .nav-cta {
+          display: none;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+
+        .mobile-menu.open {
+          display: flex;
+        }
+
+        .hero-stats {
+          gap: 24px;
+        }
+
+        .hero-stat-divider {
+          display: none;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .contact-form {
+          padding: 28px 20px;
+        }
+      }
+
+      /* Form notification banner */
+      .form-notice {
+        display: none;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 20px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      .form-notice.success {
+        background: rgba(34, 197, 94, 0.1);
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        color: #4ade80;
+      }
+      .form-notice.error {
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        color: #f87171;
+      }
+      .form-notice.show {
+        display: flex;
+      }
+
+      @media (max-width: 480px) {
+        .hero-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .hero-actions .btn {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .hero-stats {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .pricing-tabs {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ==================== NAV ==================== -->
+    <nav id="nav">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          <img src="assets/img/logo2.png" alt="Pixelfast Digital" />
+        </a>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a href="tel:+14807078494" class="btn btn-outline" style="padding: 10px 20px; font-size: 13px"> <i class="fas fa-phone"></i> Call Us </a>
+          <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 13px"> Get Free Quote </a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#services" onclick="closeMobile()">Services</a>
+        <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
+        <a href="#pricing" onclick="closeMobile()">Pricing</a>
+        <a href="#contact" onclick="closeMobile()">Contact</a>
+        <a href="#contact" class="btn btn-primary" onclick="closeMobile()">Get Free Quote</a>
+      </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Websites &bull; SEO &bull; Digital Services
+          </div>
+          <h1>
+            Grow Your Business<br />
+            <span class="gradient-text">Online — Fast.</span>
+          </h1>
+          <p class="hero-sub">Professional websites, results-driven SEO, and digital marketing that actually work for small businesses. No fluff — just results.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg"> <i class="fas fa-rocket"></i> Get a Free Quote </a>
+            <a href="#portfolio" class="btn btn-outline btn-lg"> <i class="fas fa-eye"></i> View Our Work </a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num">100+</div>
+              <div class="hero-stat-label">Projects Completed</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div>
+              <div class="hero-stat-num">5★</div>
+              <div class="hero-stat-label">Client Rating</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div>
+              <div class="hero-stat-num">Fast</div>
+              <div class="hero-stat-label">Turnaround</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div>
+              <div class="hero-stat-num">24/7</div>
+              <div class="hero-stat-label">Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STRIP ==================== -->
+    <div class="strip">
+      <div class="strip-inner">
+        <span class="strip-label">We Help Businesses With</span>
+        <div class="strip-divider"></div>
+        <div class="strip-tags">
+          <span class="strip-tag">Web Design</span>
+          <span class="strip-tag">WordPress</span>
+          <span class="strip-tag">Local SEO</span>
+          <span class="strip-tag">Google Business</span>
+          <span class="strip-tag">E-Commerce</span>
+          <span class="strip-tag">Website Fixes</span>
+          <span class="strip-tag">Web Hosting</span>
+          <span class="strip-tag">Speed Optimization</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label"><i class="fas fa-bolt"></i> What We Do</div>
+          <h2 class="section-title">Everything Your Business<br />Needs Online</h2>
+          <p class="section-subtitle">From a brand-new website to getting found on Google — we handle it all so you can focus on running your business.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3>Web Design &amp; Development</h3>
+            <p>Custom, mobile-first websites that look great and convert visitors into customers. Fast, secure, and built to rank.</p>
+            <div class="service-features">
+              <div class="service-feature"><i class="fas fa-check"></i> Custom responsive design</div>
+              <div class="service-feature"><i class="fas fa-check"></i> WordPress or static builds</div>
+              <div class="service-feature"><i class="fas fa-check"></i> SEO-ready from day one</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Contact forms &amp; integrations</div>
+            </div>
+            <a href="#pricing" class="service-link">See pricing <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+            <h3>Search Engine Optimization</h3>
+            <p>Rank higher on Google and get found by customers actively searching for your services — locally and beyond.</p>
+            <div class="service-features">
+              <div class="service-feature"><i class="fas fa-check"></i> Keyword research &amp; strategy</div>
+              <div class="service-feature"><i class="fas fa-check"></i> On-page &amp; technical SEO</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Local SEO &amp; citations</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Monthly performance reports</div>
+            </div>
+            <a href="#pricing" class="service-link">See pricing <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fab fa-google"></i></div>
+            <h3>Google Business Profile</h3>
+            <p>Get found in Google Maps and local search results. We set up, optimize, and manage your Google Business Profile for maximum visibility.</p>
+            <div class="service-features">
+              <div class="service-feature"><i class="fas fa-check"></i> Profile setup &amp; verification</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Photo &amp; content optimization</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Review strategy &amp; management</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Q&amp;A and post management</div>
+            </div>
+            <a href="#pricing" class="service-link">See pricing <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-wrench"></i></div>
+            <h3>Website Fixes &amp; Updates</h3>
+            <p>Something broken? Need a quick update? We fix WordPress issues, broken layouts, plugin problems, and more — fast.</p>
+            <div class="service-features">
+              <div class="service-feature"><i class="fas fa-check"></i> WordPress troubleshooting</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Plugin &amp; theme updates</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Bug fixes &amp; layout repairs</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Speed &amp; performance fixes</div>
+            </div>
+            <a href="#contact" class="service-link">Get a fix <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-server"></i></div>
+            <h3>Web Hosting</h3>
+            <p>Fast, reliable hosting managed for your business. We handle the technical side so your site stays online and loads quickly.</p>
+            <div class="service-features">
+              <div class="service-feature"><i class="fas fa-check"></i> Managed WordPress hosting</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Free SSL certificate</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Daily backups</div>
+              <div class="service-feature"><i class="fas fa-check"></i> 99.9% uptime guarantee</div>
+            </div>
+            <a href="#pricing" class="service-link">See pricing <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+            <h3>Website Maintenance</h3>
+            <p>Keep your site healthy, secure, and up to date month after month. We monitor, maintain, and support your website so you don't have to.</p>
+            <div class="service-features">
+              <div class="service-feature"><i class="fas fa-check"></i> Security monitoring</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Regular updates &amp; backups</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Monthly content changes</div>
+              <div class="service-feature"><i class="fas fa-check"></i> Analytics reporting</div>
+            </div>
+            <a href="#pricing" class="service-link">See pricing <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY US ==================== -->
+    <section class="why" id="about">
+      <div class="container">
+        <div class="why-grid">
+          <div>
+            <div class="section-label"><i class="fas fa-star"></i> Why Pixelfast</div>
+            <h2 class="section-title">We're in Your Corner,<br />Not Just Your Inbox</h2>
+            <p class="section-subtitle" style="margin-bottom: 0">You deserve a digital partner who actually picks up the phone, delivers on time, and cares about your results — not just your invoice.</p>
+            <div class="why-features">
+              <div class="why-feature">
+                <div class="why-feature-icon"><i class="fas fa-bolt"></i></div>
+                <div>
+                  <h4>Fast Turnaround</h4>
+                  <p>Most projects launched within 1–2 weeks. No waiting months for a basic website.</p>
+                </div>
+              </div>
+              <div class="why-feature">
+                <div class="why-feature-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+                <div>
+                  <h4>Transparent Pricing</h4>
+                  <p>No hidden fees, no surprise invoices. You know exactly what you're paying for.</p>
+                </div>
+              </div>
+              <div class="why-feature">
+                <div class="why-feature-icon"><i class="fas fa-chart-line"></i></div>
+                <div>
+                  <h4>Results-Focused</h4>
+                  <p>A pretty site that doesn't generate business is useless. We build sites that convert and rank.</p>
+                </div>
+              </div>
+              <div class="why-feature">
+                <div class="why-feature-icon"><i class="fas fa-headset"></i></div>
+                <div>
+                  <h4>Real Support</h4>
+                  <p>You'll always have a real person to reach out to — not a ticket system or offshore call center.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="why-visual">
+            <div class="why-card-stack">
+              <div class="why-card why-card-back"></div>
+              <div class="why-card why-card-main">
+                <div class="why-card-title">
+                  <span class="icon-dot"></span>
+                  Client Results Overview
+                </div>
+                <div class="result-row">
+                  <span class="result-label">Google Rankings</span>
+                  <span class="result-value">↑ Page 1</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-label">Site Load Time</span>
+                  <span class="result-value">↓ &lt; 2s</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-label">Monthly Visitors</span>
+                  <span class="result-value">↑ +340%</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-label">Lead Form Conversions</span>
+                  <span class="result-value orange">↑ +210%</span>
+                </div>
+                <div class="metrics-row">
+                  <div class="metric-box">
+                    <div class="metric-num">100+</div>
+                    <div class="metric-label">Sites Built</div>
+                  </div>
+                  <div class="metric-box">
+                    <div class="metric-num">5★</div>
+                    <div class="metric-label">Avg. Rating</div>
+                  </div>
+                  <div class="metric-box">
+                    <div class="metric-num">98%</div>
+                    <div class="metric-label">Client Retention</div>
+                  </div>
+                  <div class="metric-box">
+                    <div class="metric-num">2wk</div>
+                    <div class="metric-label">Avg. Launch</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO ==================== -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-header centered">
+          <div class="section-label"><i class="fas fa-images"></i> Our Work</div>
+          <h2 class="section-title">Recent Projects</h2>
+          <p class="section-subtitle">A sample of websites and digital projects we've built for small businesses across various industries.</p>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <a href="https://pixelfast.com/cafemollie/" target="_blank" rel="noopener">
+              <div class="portfolio-img">
+                <img src="assets/img/cafemollie.com.png" alt="Cafe Mollie website" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-overlay-btn">View Live Site</span>
+                </div>
+              </div>
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Web Design</span>
+              <h3>Cafe Mollie</h3>
+              <p>Restaurant website with menu &amp; online presence</p>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <a href="https://arizonayarddoctors.com" target="_blank" rel="noopener">
+              <div class="portfolio-img">
+                <img src="assets/img/arizonayarddoctors.com.png" alt="Arizona Yard Doctors website" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-overlay-btn">View Live Site</span>
+                </div>
+              </div>
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Web Design + SEO</span>
+              <h3>Arizona Yard Doctors</h3>
+              <p>Landscaping &amp; yard services lead generation site</p>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <a href="https://mccormicklendinggroup.com" target="_blank" rel="noopener">
+              <div class="portfolio-img">
+                <img src="assets/img/mccormicklendinggroup.com.png" alt="McCormick Lending Group website" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-overlay-btn">View Live Site</span>
+                </div>
+              </div>
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Web Design</span>
+              <h3>McCormick Lending Group</h3>
+              <p>Professional mortgage &amp; lending services website</p>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <a href="https://cribpost.com" target="_blank" rel="noopener">
+              <div class="portfolio-img">
+                <img src="assets/img/cribpost.com.png" alt="CribPost website" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-overlay-btn">View Live Site</span>
+                </div>
+              </div>
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Web App</span>
+              <h3>CribPost</h3>
+              <p>Real estate listings &amp; property platform</p>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <a href="https://emailflyers.net" target="_blank" rel="noopener">
+              <div class="portfolio-img">
+                <img src="assets/img/emailfleyrs.net.png" alt="Email Flyers website" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-overlay-btn">View Live Site</span>
+                </div>
+              </div>
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Web Design</span>
+              <h3>Email Flyers</h3>
+              <p>Email marketing platform &amp; service website</p>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <a href="https://pixelfast.com/listing-websites/" target="_blank" rel="noopener">
+              <div class="portfolio-img">
+                <img src="assets/img/wisterialane.png" alt="Wisteria Lane listing website" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-overlay-btn">View Live Site</span>
+                </div>
+              </div>
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Web Design</span>
+              <h3>Wisteria Lane</h3>
+              <p>Property listing &amp; real estate showcase site</p>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <a href="https://pixelfast.com/listing-websites/?v=2" target="_blank" rel="noopener">
+              <div class="portfolio-img">
+                <img src="assets/img/wisterialane2.png" alt="Wisteria Lane v2 listing website" />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-overlay-btn">View Live Site</span>
+                </div>
+              </div>
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Web Design</span>
+              <h3>Wisteria Lane v2</h3>
+              <p>Redesigned property listing website</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-cta">
+          <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 15px">Ready to add your business here?</p>
+          <a href="#contact" class="btn btn-primary btn-lg"> <i class="fas fa-rocket"></i> Start Your Project </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRICING ==================== -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header centered">
+          <div class="section-label"><i class="fas fa-tag"></i> Pricing</div>
+          <h2 class="section-title">Simple, Transparent Pricing</h2>
+          <p class="section-subtitle">No surprises, no upsells. Choose the package that fits your business and budget.</p>
+        </div>
+
+        <div class="pricing-tabs">
+          <button class="pricing-tab active" onclick="switchTab('websites')">Website Packages</button>
+          <button class="pricing-tab" onclick="switchTab('seo')">SEO Packages</button>
+          <button class="pricing-tab" onclick="switchTab('maintenance')">Maintenance</button>
+        </div>
+
+        <!-- WEBSITES -->
+        <div class="pricing-panel active" id="tab-websites">
+          <div class="pricing-grid">
+            <div class="price-card">
+              <div class="price-name">Starter Site</div>
+              <div class="price-desc">Perfect for businesses that need a clean, professional online presence — fast.</div>
+              <div class="price-amount"><span class="dollar">$</span><span class="number">799</span></div>
+              <div class="price-divider"></div>
+              <div class="price-features">
+                <div class="price-feature included"><i class="fas fa-check"></i> Up to 5 pages</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Mobile-responsive design</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Contact form</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Basic on-page SEO</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Google Analytics setup</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> 30-day support</div>
+                <div class="price-feature"><i class="fas fa-xmark"></i> Blog / news section</div>
+                <div class="price-feature"><i class="fas fa-xmark"></i> E-commerce ready</div>
+              </div>
+              <a href="#contact" class="btn btn-outline">Get Started</a>
+            </div>
+
+            <div class="price-card featured">
+              <div class="price-badge">Most Popular</div>
+              <div class="price-name">Business Site</div>
+              <div class="price-desc">A full-featured website built to grow your business and dominate local search.</div>
+              <div class="price-amount"><span class="dollar">$</span><span class="number gradient-text">1,499</span></div>
+              <div class="price-divider"></div>
+              <div class="price-features">
+                <div class="price-feature included"><i class="fas fa-check"></i> Up to 10 pages</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Custom design &amp; branding</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Blog / news section</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Full on-page SEO</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Google Analytics &amp; Search Console</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Google Business setup</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> 60-day support</div>
+                <div class="price-feature"><i class="fas fa-xmark"></i> E-commerce / online store</div>
+              </div>
+              <a href="#contact" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <div class="price-card">
+              <div class="price-name">Premium Site</div>
+              <div class="price-desc">A fully custom build for businesses that want the best — with e-commerce and everything included.</div>
+              <div class="price-amount"><span class="dollar">$</span><span class="number">2,499</span></div>
+              <div class="price-divider"></div>
+              <div class="price-features">
+                <div class="price-feature included"><i class="fas fa-check"></i> Unlimited pages</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Fully custom design</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> E-commerce / WooCommerce</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Advanced SEO package</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Speed &amp; Core Web Vitals optimization</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Google Business + review strategy</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> 90-day support</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> 1 month free maintenance</div>
+              </div>
+              <a href="#contact" class="btn btn-outline">Get Started</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEO -->
+        <div class="pricing-panel" id="tab-seo">
+          <div class="pricing-grid">
+            <div class="price-card">
+              <div class="price-name">Local Boost</div>
+              <div class="price-desc">Get found in local search and Google Maps. Perfect for brick-and-mortar businesses.</div>
+              <div class="price-amount"><span class="dollar">$</span><span class="number">299</span><span class="period">/mo</span></div>
+              <div class="price-divider"></div>
+              <div class="price-features">
+                <div class="price-feature included"><i class="fas fa-check"></i> Google Business optimization</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Local citation building</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> On-page SEO (up to 5 pages)</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Monthly ranking report</div>
+                <div class="price-feature"><i class="fas fa-xmark"></i> Link building</div>
+                <div class="price-feature"><i class="fas fa-xmark"></i> Content creation</div>
+              </div>
+              <a href="#contact" class="btn btn-outline">Get Started</a>
+            </div>
+
+            <div class="price-card featured">
+              <div class="price-badge">Most Popular</div>
+              <div class="price-name">SEO Growth</div>
+              <div class="price-desc">Full-service SEO for businesses ready to dominate search results in their market.</div>
+              <div class="price-amount"><span class="dollar">$</span><span class="number gradient-text">599</span><span class="period">/mo</span></div>
+              <div class="price-divider"></div>
+              <div class="price-features">
+                <div class="price-feature included"><i class="fas fa-check"></i> Everything in Local Boost</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Full on-page &amp; technical SEO</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Keyword research &amp; strategy</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Link building &amp; outreach</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> 2 blog posts/month</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Bi-weekly reports</div>
+              </div>
+              <a href="#contact" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <div class="price-card">
+              <div class="price-name">SEO Pro</div>
+              <div class="price-desc">Comprehensive SEO with a dedicated manager and full content strategy for aggressive growth.</div>
+              <div class="price-amount"><span class="dollar">$</span><span class="number">999</span><span class="period">/mo</span></div>
+              <div class="price-divider"></div>
+              <div class="price-features">
+                <div class="price-feature included"><i class="fas fa-check"></i> Everything in SEO Growth</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Dedicated account manager</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Competitor analysis &amp; tracking</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> 4 blog posts/month</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Technical SEO audits</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Weekly reports &amp; strategy calls</div>
+              </div>
+              <a href="#contact" class="btn btn-outline">Get Started</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAINTENANCE -->
+        <div class="pricing-panel" id="tab-maintenance">
+          <div class="pricing-grid">
+            <div class="price-card">
+              <div class="price-name">Basic Care</div>
+              <div class="price-desc">Keep your site healthy and secure without lifting a finger.</div>
+              <div class="price-amount"><span class="dollar">$</span><span class="number">99</span><span class="period">/mo</span></div>
+              <div class="price-divider"></div>
+              <div class="price-features">
+                <div class="price-feature included"><i class="fas fa-check"></i> WordPress core updates</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Plugin &amp; theme updates</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Daily backups</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Uptime monitoring</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Security scanning</div>
+                <div class="price-feature"><i class="fas fa-xmark"></i> Content changes</div>
+                <div class="price-feature"><i class="fas fa-xmark"></i> Monthly report</div>
+              </div>
+              <a href="#contact" class="btn btn-outline">Get Started</a>
+            </div>
+
+            <div class="price-card featured">
+              <div class="price-badge">Most Popular</div>
+              <div class="price-name">Pro Care</div>
+              <div class="price-desc">Everything you need to keep your site fresh, fast, and generating business.</div>
+              <div class="price-amount"><span class="dollar">$</span><span class="number gradient-text">199</span><span class="period">/mo</span></div>
+              <div class="price-divider"></div>
+              <div class="price-features">
+                <div class="price-feature included"><i class="fas fa-check"></i> Everything in Basic Care</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Up to 2 hrs content changes/mo</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Monthly analytics report</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Performance optimization</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Priority support</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Discounted hourly rate</div>
+              </div>
+              <a href="#contact" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <div class="price-card">
+              <div class="price-name">Hosting</div>
+              <div class="price-desc">Managed WordPress hosting — fast, secure, and hassle-free.</div>
+              <div class="price-amount"><span class="dollar">$</span><span class="number">25</span><span class="period">/mo</span></div>
+              <div class="price-divider"></div>
+              <div class="price-features">
+                <div class="price-feature included"><i class="fas fa-check"></i> Managed WordPress hosting</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Free SSL certificate</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> CDN &amp; caching included</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> 99.9% uptime SLA</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Daily backups</div>
+                <div class="price-feature included"><i class="fas fa-check"></i> Malware protection</div>
+              </div>
+              <a href="#contact" class="btn btn-outline">Get Started</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Addons -->
+        <div class="addons-section">
+          <p class="addons-title">À La Carte Services</p>
+          <div class="addons-grid">
+            <div class="addon-card">
+              <div class="addon-icon"><i class="fab fa-google"></i></div>
+              <div>
+                <div class="addon-name">Google Business Setup</div>
+                <div class="addon-price">$199 one-time</div>
+              </div>
+            </div>
+            <div class="addon-card">
+              <div class="addon-icon"><i class="fas fa-tools"></i></div>
+              <div>
+                <div class="addon-name">Website Fix / Hourly Work</div>
+                <div class="addon-price">$75/hour</div>
+              </div>
+            </div>
+            <div class="addon-card">
+              <div class="addon-icon"><i class="fas fa-tachometer-alt"></i></div>
+              <div>
+                <div class="addon-name">Speed Optimization</div>
+                <div class="addon-price">$199 one-time</div>
+              </div>
+            </div>
+            <div class="addon-card">
+              <div class="addon-icon"><i class="fas fa-file-alt"></i></div>
+              <div>
+                <div class="addon-name">Landing Page</div>
+                <div class="addon-price">Starting at $299</div>
+              </div>
+            </div>
+            <div class="addon-card">
+              <div class="addon-icon"><i class="fas fa-pen-nib"></i></div>
+              <div>
+                <div class="addon-name">Blog Post / Content</div>
+                <div class="addon-price">Starting at $75/post</div>
+              </div>
+            </div>
+            <div class="addon-card">
+              <div class="addon-icon"><i class="fas fa-exchange-alt"></i></div>
+              <div>
+                <div class="addon-name">Website Migration</div>
+                <div class="addon-price">Starting at $149</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="section-label"><i class="fas fa-envelope"></i> Get In Touch</div>
+            <h2 class="section-title">Let's Build Something<br />Great Together</h2>
+            <p class="section-subtitle">Have a project in mind? Want a free quote? Fill out the form and I'll get back to you within 1 business day.</p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <div class="contact-item-label">Email</div>
+                  <div class="contact-item-value">
+                    <a href="mailto:michael@pixelfast.com">michael@pixelfast.com</a>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <div class="contact-item-label">Phone</div>
+                  <div class="contact-item-value">
+                    <a href="tel:+14807078494">(480) 707-8494</a>
+                  </div>
+                  <div style="font-size: 12px; color: var(--text-muted); margin-top: 3px">Call or Text</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+                <div>
+                  <div class="contact-item-label">Response Time</div>
+                  <div class="contact-item-value">Within 1 business day</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Get Your Free Quote</h3>
+            <p class="contact-form-sub">No obligation. Tell us what you need and we'll put together a custom proposal.</p>
+            <div class="form-notice success" id="formSuccess"><i class="fas fa-circle-check"></i> Message sent! I'll be in touch within 1 business day.</div>
+            <div class="form-notice error" id="formError"><i class="fas fa-circle-exclamation"></i> Something went wrong. Please email me directly at <a href="mailto:michael@pixelfast.com" style="color: inherit; text-decoration: underline">michael@pixelfast.com</a>.</div>
+            <form action="contact.php" method="POST" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+                </div>
+                <div class="form-group">
+                  <label for="business">Business Name</label>
+                  <input type="text" id="business" name="business" placeholder="Acme Co." />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone (optional)</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="service">Service Interested In</label>
+                <select id="service" name="service">
+                  <option value="">Select a service...</option>
+                  <option>Web Design &amp; Development</option>
+                  <option>SEO</option>
+                  <option>Google Business Profile</option>
+                  <option>Website Fix / Update</option>
+                  <option>Web Hosting</option>
+                  <option>Website Maintenance</option>
+                  <option>Not sure yet — need advice</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Tell Us About Your Project</label>
+                <textarea id="message" name="message" placeholder="What's your website for? Do you have an existing site? What's your timeline and budget? The more detail, the better!"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg form-submit"><i class="fas fa-paper-plane"></i> Send My Free Quote Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/img/logo2.png" alt="Pixelfast Digital" />
+            <p>Professional web design, SEO, and digital services that help small businesses grow online — fast, affordable, and results-driven.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Web Design &amp; Dev</a></li>
+              <li><a href="#services">SEO</a></li>
+              <li><a href="#services">Google Business</a></li>
+              <li><a href="#services">Website Fixes</a></li>
+              <li><a href="#services">Web Hosting</a></li>
+              <li><a href="#services">Maintenance</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#contact">Free Quote</a></li>
+              <li><a href="#pricing">Pricing Guide</a></li>
+              <li><a href="mailto:michael@pixelfast.com">Email Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">&copy; <span id="year"></span> Pixelfast Digital. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+      // Dynamic copyright year
+      document.getElementById('year').textContent = new Date().getFullYear()
+
+      // Sticky nav
+      const nav = document.getElementById('nav')
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 40)
+        document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400)
+      })
+
+      // Mobile menu toggle
+      const hamburger = document.getElementById('hamburger')
+      const mobileMenu = document.getElementById('mobileMenu')
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open')
+        mobileMenu.classList.toggle('open')
+      })
+
+      function closeMobile() {
+        hamburger.classList.remove('open')
+        mobileMenu.classList.remove('open')
+      }
+
+      // Pricing tabs
+      function switchTab(tab) {
+        document.querySelectorAll('.pricing-tab').forEach((t, i) => {
+          const tabs = ['websites', 'seo', 'maintenance']
+          t.classList.toggle('active', tabs[i] === tab)
+        })
+        document.querySelectorAll('.pricing-panel').forEach((p) => {
+          p.classList.toggle('active', p.id === 'tab-' + tab)
+        })
+      }
+
+      // Scroll to top
+      document.getElementById('scrollTop').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      })
+
+      // Smooth anchor scrolling with nav offset
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'))
+          if (target) {
+            e.preventDefault()
+            const offset = 80
+            window.scrollTo({
+              top: target.getBoundingClientRect().top + window.scrollY - offset,
+              behavior: 'smooth',
+            })
+          }
+        })
+      })
+
+      // Form success / error banners
+      const params = new URLSearchParams(window.location.search)
+      if (params.get('sent') === '1') {
+        document.getElementById('formSuccess').classList.add('show')
+        document.getElementById('contactForm').style.display = 'none'
+        document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })
+        history.replaceState({}, '', '/')
+      }
+      if (params.get('error') === '1') {
+        document.getElementById('formError').classList.add('show')
+        document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })
+        history.replaceState({}, '', '/')
+      }
+
+      // Subtle scroll-in animation
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1'
+              entry.target.style.transform = 'translateY(0)'
+            }
+          })
+        },
+        { threshold: 0.1 },
+      )
+
+      document.querySelectorAll('.service-card, .price-card, .portfolio-card, .why-feature, .addon-card').forEach((el) => {
+        el.style.opacity = '0'
+        el.style.transform = 'translateY(24px)'
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'
+        observer.observe(el)
+      })
+    </script>
+  </body>
 </html>
